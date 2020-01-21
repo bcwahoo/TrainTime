@@ -6,24 +6,25 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
+  <!-- link to jquery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+
+
   <!-- link to bootstrap -->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
   <!-- link to css style sheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-  <!-- link to jquery -->
-  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
-
   <!-- Title for webpage -->
   <title>WAHOO TRANSIT AUTHORITY</title>
-
 </head>
 
 <body>
 
   <div class="top-container">
+
     <!-- Jumbotron -->
     <div class="jumbotron">
       <h1>WAHOO MTA</h1>
@@ -91,8 +92,8 @@
         </div>
 
         <!-- Submit Button -->
-        <div id="align">
-          <button type="submit" class="btn btn-primary" id="add-train-btn">
+        <div style="margin: auto;">
+          <button type="submit" class="btn btn-primary" id="add-train-btn center">
             Submit
           </button>
         </div>
@@ -102,12 +103,10 @@
   </div>
 
   <!-- links -->
+  <!-- Add the entire Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase.js"></script>
   <script src="assets/javascript/logic.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-
 
 </body>
 
