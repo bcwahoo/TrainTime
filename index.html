@@ -1,56 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 
+  <!-- link to bootstrap -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-  <!-- My own CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- link to css style sheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+  <!-- link to jquery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+
+  <!-- Title for webpage -->
+  <title>WAHOO TRANSIT AUTHORITY</title>
+
 </head>
 
 <body>
-  <div class="container top-container">
-    <!-- Page Content goes here -->
-    <div class=" #1976d2 blue darken-2 center-align">
-      <h1>Anytime is TrainTime</h1>
-      <h4>Choo Choo, Chee Chee</h4>
+
+  <div class="top-container">
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1>WAHOO MTA</h1>
+      <p id="mta">CATCH THIS TRAIN SON</p>
+      <p id="time"></p>
     </div>
 
-    <div class="#1976d2 blue darken-2 center-align">
-      <table class="striped #b3e5fc light-blue lighten-4">
+    <div class="panel panel-primary">
+      <!-- Firebase panel Content-->
+      <div class="panel-heading" id="TS">Train Schedule</div>
+
+      <!-- Table -->
+      <table class="table">
         <thead>
           <tr>
-            <th>Train Time</th>
+            <th>Name</th>
             <th>Destination</th>
             <th>Frequency</th>
             <th>Next Arrival</th>
-            <th>Mins. Away</th>
+            <th>Minutes Away</th>
           </tr>
         </thead>
-        <tr>
-          <td>12:03</td>
-          <td>12:03</td>
-          <td>12:03</td>
-          <td>12:03</td>
-          <td>12:03</td>
-        </tr>
-
-
+        <tbody id="train-table">
+          <!-- Below Insert data the user inputs into firebase -->
+          <!--<tr>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--<td>  </td>-->
+          <!--</tr>-->
+        </tbody>
       </table>
-
     </div>
 
+    <!-- New Train panel contents -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">Add A Train</div>
+      <div class="panel-body">
 
-  </div><!-- Ending of Container Divs  -->
+        <!-- Train Name user input -->
+        <div class="form-group">
+          <label for="input-train"> Train Name </label>
+          <input type="text" class="form-control" id="input-train" placeholder="Enter Train Name Here" />
+        </div>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Train Destination user input -->
+        <div class="form-group">
+          <label for="input-dest">Destination</label>
+          <input type="text" class="form-control" id="input-dest" placeholder="Where To" />
+        </div>
+
+        <!-- First Train Time user input -->
+        <div class="form-group">
+          <label for="input-first-train">
+            First Train Time (HH:mm - Military Time)</label>
+          <br />
+          <input type="time" class="form-control" id="input-first-train" placeholder="00:00" />
+        </div>
+
+        <!-- Train Frequency -->
+        <div class="form-group">
+          <label for="input-freq">Frequency</label>
+          <input type="number" class="form-control" id="input-freq" placeholder="Enter Value Of Minutes (Not 0)" />
+        </div>
+
+        <!-- Submit Button -->
+        <div id="align">
+          <button type="submit" class="btn btn-primary" id="add-train-btn">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--End of TOP CONTAINER-->
+  </div>
+
+  <!-- links -->
+  <script src="assets/javascript/logic.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+
 </body>
 
 </html>

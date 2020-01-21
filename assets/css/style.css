@@ -1,8 +1,17 @@
-button,
-div,
+@font-face {
+  font-family: myTag;
+  src: url(../fonts/street-hustle.ttf);
+}
+
+@font-face {
+  font-family: quest;
+  src: url(../fonts/Sprayer.ttf);
+}
+button,div,
 form,
 input {
   margin: 10px;
+  padding: 10px;
 }
 body {
     background-image: url("../images/train-station.jpg");
@@ -12,9 +21,101 @@ body {
     background-size: cover;
     background-color: #464646;
   }
-  .top-container {
-    width: 80%;
-    margin: 0 10%;
-    padding: 25px;
-    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-}
+  .top-container{
+      width: 80%;
+      margin: 2.5% auto;
+  }
+  .jumbotron {
+    text-align: center;
+    color: rgb(246, 172, 11);
+      border: 3px solid rgb(190, 97, 10);
+    border-radius: 10px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    background-color: rgba(10, 10, 10, 0.301);    
+    backdrop-filter: blur(5px);
+  }
+  
+  h1 {
+    text-shadow: 0 0 20px #000000;
+    font-family: 'myTag';
+    font-size : 60px; 
+  }
+  
+  #wahoo {
+      font-family: 'quest', cursive;
+      font-size: 20px; 
+      text-shadow: 0 0 20px #000000;
+  }
+  
+  #time {
+      font-family: 'quest', cursive;
+      font-size: 50px; 
+  }
+  
+  td {
+    font-family: 'quest', cursive;
+    border-right: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-top: 0;
+    color: rgb(190, 97, 10); 
+    font-size: 20px; 
+  }
+  
+  th, label {
+    font-family: 'quest';
+    text-align: center;
+    color: rgb(190, 97, 10);
+    border-bottom: 2px solid #000000 !important;
+    border-right: 2px solid #000000 !important;
+    font-size: 25px; 
+  }
+  
+  th:last-child,
+  td:last-child {
+    border-right: none !important;
+  }
+  
+  .panel {
+    border: 3px solid rgb(190, 97, 10);
+    border-radius: 10px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    background-color: rgba(10, 10, 10, 0.301);    
+    backdrop-filter: blur(5px);
+  }
+  
+  td {
+    text-align: center;
+  }
+  .panel-primary > .panel-heading {
+    color: #fff;
+    background-color: rgb(190, 97, 10);
+    border-color: rgb(190, 97, 10);
+  }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: rgb(190, 97, 10);
+    border-color: #771212;
+    font-family: 'quest';
+    font-size: 20px; 
+  }
+  #TS, #mta {
+      font-family: 'quest';
+      font-size: 30px; 
+      text-align: center; 
+  }
+  #input-train, #input-dest, #input-first-train, #input-freq {
+      font-family: 'quest';
+      font-size: 20px;
+      color: #771212; 
+  }
+  button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: white;
+      background: darkred; 
+      border-color: darkred; 
+  }
